@@ -44,7 +44,7 @@ export default Sidebar
 const Wrapper = styled.div`
   height: calc() 100vh;
   border-right: 1px solid #282b2f;
-  width: calc(22rem - 16px - 16px);
+  width: calc(20rem - 16px - 16px);
   border: none;
   padding: 0 1rem;
 `
@@ -64,19 +64,19 @@ const NavItemsContainer = styled.div`
 const NavItem = styled.div`
   display: flex;
   align-items: center;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: 500;
-  /* border-radius: 0.5rem; */
   margin-bottom: 1.5rem;
-  height: 4rem;
+  height: 3.5rem;
   &:hover {
-    background-color: #141519;
+    border-radius: 5px 0px 0px 5px;
+    background-color: rgba(120, 200, 198, 0.2);
   }
 `
 const NavIcon = styled.div`
-  padding: 0.7rem;
+  padding: 0.2rem;
   border-radius: 50%;
-  margin: 0 1rem;
+  margin: 0 1rem 0 0.5rem;
   display: grid;
   place-items: center;
 `

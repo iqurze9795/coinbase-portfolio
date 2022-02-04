@@ -3,10 +3,14 @@ import { BsThreeDotsVertical } from 'react-icons/bs'
 import styled from 'styled-components'
 import { coins } from '../static/coins'
 import Coin from './Coin'
+import CoinPrice from './CoinPrice'
 function Portfolio() {
   return (
     <Wrapper>
       <Content>
+        <Chart>
+          <CoinPrice />
+        </Chart>
         <PortfolioTable>
           <TableItem>
             <Title>Your Assets</Title>
@@ -54,6 +58,11 @@ const Content = styled.div`
   max-height: 1000px;
   padding: 2rem 1rem;
 `
+const Chart = styled.div`
+  border: 1px solid #282b2f;
+  padding: 1rem 2rem;
+`
+
 const PortfolioTable = styled.div`
   margin-top: 1rem;
   border: 1px solid #282b2f;
@@ -75,7 +84,7 @@ const TableItem = styled.div`
 const Divider = styled.div`
   border-bottom: 1px solid #282b2f;
   &:last-child {
-      display: none;
+    display: none;
   }
 `
 const Title = styled.div`

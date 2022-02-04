@@ -8,7 +8,6 @@ const Networth = () => {
     labels: ['ETH', 'USDC', 'BTC', 'GLMR'],
     datasets: [
       {
-        label: 'My First Dataset',
         data: [300, 50, 100, 100],
         backgroundColor: ['#D93780', '#78C8C7', '#E8B840', '#65C378'],
         borderColor: 'none',
@@ -16,6 +15,19 @@ const Networth = () => {
         hoverOffset: 4,
       },
     ],
+  }
+  const options = {
+    plugins: {
+      legend: {
+        labels: {
+          // This more specific font property overrides the global property
+          font: {
+            size: 14,
+          },
+          color: 'white',
+        },
+      },
+    },
   }
   return (
     <Wrapper>
@@ -27,7 +39,7 @@ const Networth = () => {
       </Card>
       <Card style={{ height: '20rem' }}>
         <Title>Allocation</Title>
-        <Doughnut style={{ padding: '2rem' }} data={data} />
+        <Doughnut style={{ padding: '2rem' }} data={data} options={options} />
         <PlaceHolder />
       </Card>
     </Wrapper>
