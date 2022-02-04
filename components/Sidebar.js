@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import ConibaseLogo from '../assets/cb-logo.png'
 import Image from 'next/image'
 import { navItems } from '../static/navItems'
 
 const Sidebar = () => {
+  const [activeIcon, setActiveIcon] = useState(navItems[0].title)
   return (
     <Wrapper>
       <LogoContainer>
@@ -15,8 +16,12 @@ const Sidebar = () => {
       <NavItemsContainer>
         {navItems.map((navItem, index) => {
           return (
-            <NavItem key={index}>
-              <NavIcon>{navItem.icon}</NavIcon>
+            <NavItem key={index} onClick={() => setActiveIcon(navItem.title)}>
+              <NavIcon
+                style={{ color: navItem.title === activeIcon && '#3773f5' }}
+              >
+                {navItem.icon}
+              </NavIcon>
               <NavTitle>{navItem.title}</NavTitle>
             </NavItem>
           )
@@ -69,5 +74,4 @@ const NavIcon = styled.div`
   place-items: center;
 `
 
-const NavTitle = styled.div`
-`
+const NavTitle = styled.div``
