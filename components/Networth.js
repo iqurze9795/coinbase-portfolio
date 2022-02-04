@@ -5,13 +5,10 @@ const Networth = () => {
   return (
     <Wrapper>
       <Card>
-        <Title>Yield earn</Title>
-      </Card>
-      <Card>
-        <Title>Yield earn</Title>
-      </Card>
-      <Card>
-        <Title>Yield earn</Title>
+        <Title>NET WORTH</Title>
+        <h1 className="gradient__text">470,000$</h1>
+        <Description>Holding 4 Assets</Description>
+        <PlaceHolder />
       </Card>
     </Wrapper>
   )
@@ -31,12 +28,12 @@ const Card = styled.div`
   margin-bottom: 1rem;
   padding: 1.5rem;
   display: flex;
+  align-items: center;
   flex-direction: column;
 `
 const Title = styled.div`
-  font-weight: 700;
-  font-size: 1.5rem;
-  margin-bottom: 0.1rem;
+  font-weight: 500;
+  font-size: 1rem;
 `
 const Description = styled.div`
   font-size: 1.1rem;
