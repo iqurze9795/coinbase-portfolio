@@ -1,5 +1,5 @@
 {
-  "name": "coinbaseportfolio",
+  "name": "studio",
   "private": true,
   "version": "1.0.0",
   "description": "",
@@ -30,6 +30,6 @@
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git@github.com:iqurze9795/coinbase-portfolio.git"
+    "url": "git@github.com:iqurze9795/moonbeam-portfolio.git"
   }
 }

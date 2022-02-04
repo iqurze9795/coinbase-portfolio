@@ -7,7 +7,7 @@ import { navItems } from '../static/navItems'
 const Sidebar = () => {
   const [activeIcon, setActiveIcon] = useState(navItems[0].title)
   return (
-    <Wrapper>
+    <Wrapper className='bg-second-gradient'>
       <LogoContainer>
         <Logo>
           <Image src={MoonbeamLogo}></Image>
@@ -37,44 +37,8 @@ const Wrapper = styled.div`
   height: calc() 100vh;
   border-right: 1px solid #282b2f;
   width: calc(22rem - 16px - 16px);
+  border: none;
   padding: 0 1rem;
-  /* ff 3.6+ */
-  background: -moz-linear-gradient(
-    330deg,
-    rgba(10, 10, 10, 1) 0%,
-    rgba(19, 25, 55, 1) 59%
-  );
-
-  /* safari 5.1+,chrome 10+ */
-  background: -webkit-linear-gradient(
-    330deg,
-    rgba(10, 10, 10, 1) 0%,
-    rgba(19, 25, 55, 1) 59%
-  );
-
-  /* opera 11.10+ */
-  background: -o-linear-gradient(
-    330deg,
-    rgba(10, 10, 10, 1) 0%,
-    rgba(19, 25, 55, 1) 59%
-  );
-
-  /* ie 6-9 */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0A0A0A', endColorstr='#131937', GradientType=1 );
-
-  /* ie 10+ */
-  background: -ms-linear-gradient(
-    330deg,
-    rgba(10, 10, 10, 1) 0%,
-    rgba(19, 25, 55, 1) 59%
-  );
-
-  /* global 94%+ browsers support */
-  background: linear-gradient(
-    330deg,
-    rgba(10, 10, 10, 1) 0%,
-    rgba(19, 25, 55, 1) 59%
-  );
 `
 const LogoContainer = styled.div`
   margin: 1.5rem 0;

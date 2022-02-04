@@ -1,7 +1,7 @@
 {
   "root": true,
   "project": {
-    "name": "coinbase-portfolio"
+    "name": "moonbeam-portfolio"
   },
   "api": {
     "projectId": "tdmgrb4y",

@@ -1,11 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
 import Portfolio from './Portfolio'
-
+import Networth from '../components/Networth'
 const Main = () => {
   return (
     <Wrapper>
       <Portfolio />
+      <Networth />
     </Wrapper>
   )
 }
