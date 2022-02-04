@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import ConibaseLogo from '../assets/cb-logo.png'
+import MoonbeamLogo from '../assets/moonbeam-logo.png'
 import Image from 'next/image'
 import { navItems } from '../static/navItems'
 
@@ -10,7 +10,7 @@ const Sidebar = () => {
     <Wrapper>
       <LogoContainer>
         <Logo>
-          <Image src={ConibaseLogo}></Image>
+          <Image src={MoonbeamLogo}></Image>
         </Logo>
       </LogoContainer>
       <NavItemsContainer>
@@ -38,14 +38,51 @@ const Wrapper = styled.div`
   border-right: 1px solid #282b2f;
   width: calc(22rem - 16px - 16px);
   padding: 0 1rem;
+  /* ff 3.6+ */
+  background: -moz-linear-gradient(
+    330deg,
+    rgba(10, 10, 10, 1) 0%,
+    rgba(19, 25, 55, 1) 59%
+  );
+
+  /* safari 5.1+,chrome 10+ */
+  background: -webkit-linear-gradient(
+    330deg,
+    rgba(10, 10, 10, 1) 0%,
+    rgba(19, 25, 55, 1) 59%
+  );
+
+  /* opera 11.10+ */
+  background: -o-linear-gradient(
+    330deg,
+    rgba(10, 10, 10, 1) 0%,
+    rgba(19, 25, 55, 1) 59%
+  );
+
+  /* ie 6-9 */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0A0A0A', endColorstr='#131937', GradientType=1 );
+
+  /* ie 10+ */
+  background: -ms-linear-gradient(
+    330deg,
+    rgba(10, 10, 10, 1) 0%,
+    rgba(19, 25, 55, 1) 59%
+  );
+
+  /* global 94%+ browsers support */
+  background: linear-gradient(
+    330deg,
+    rgba(10, 10, 10, 1) 0%,
+    rgba(19, 25, 55, 1) 59%
+  );
 `
 const LogoContainer = styled.div`
   margin: 1.5rem 0;
 `
 const Logo = styled.div`
-  width: 44%;
+  width: 90%;
   object-fit: contain;
-  margin-left: 1.5rem;
+  /* margin-left: 1.5rem; */
 `
 const NavItemsContainer = styled.div`
   margin-top: 3rem;
