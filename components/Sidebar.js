@@ -7,7 +7,7 @@ import { navItems } from '../static/navItems'
 const Sidebar = () => {
   const [activeIcon, setActiveIcon] = useState(navItems[0].title)
   return (
-    <Wrapper className='bg-second-gradient'>
+    <Wrapper className="bg-second-gradient">
       <LogoContainer>
         <Logo>
           <Image src={MoonbeamLogo}></Image>
@@ -16,9 +16,17 @@ const Sidebar = () => {
       <NavItemsContainer>
         {navItems.map((navItem, index) => {
           return (
-            <NavItem key={index} onClick={() => setActiveIcon(navItem.title)}>
+            <NavItem
+              style={{
+                borderRight:
+                  navItem.title === activeIcon && '6px solid #78C8C6',
+                color: navItem.title === activeIcon && '#78C8C6',
+              }}
+              key={index}
+              onClick={() => setActiveIcon(navItem.title)}
+            >
               <NavIcon
-                style={{ color: navItem.title === activeIcon && '#3773f5' }}
+                style={{ color: navItem.title === activeIcon && '#78C8C6' }}
               >
                 {navItem.icon}
               </NavIcon>
@@ -46,7 +54,6 @@ const LogoContainer = styled.div`
 const Logo = styled.div`
   width: 90%;
   object-fit: contain;
-  /* margin-left: 1.5rem; */
 `
 const NavItemsContainer = styled.div`
   margin-top: 3rem;
@@ -59,7 +66,7 @@ const NavItem = styled.div`
   align-items: center;
   font-size: 1.3rem;
   font-weight: 500;
-  border-radius: 0.5rem;
+  /* border-radius: 0.5rem; */
   margin-bottom: 1.5rem;
   height: 4rem;
   &:hover {
@@ -67,7 +74,6 @@ const NavItem = styled.div`
   }
 `
 const NavIcon = styled.div`
-  background-color: #141519;
   padding: 0.7rem;
   border-radius: 50%;
   margin: 0 1rem;
