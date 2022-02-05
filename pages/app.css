@@ -1,0 +1,46 @@
+.bg-gradient {
+  /* ff 3.6+ */
+  background: -moz-linear-gradient(
+    330deg,
+    rgba(10, 10, 10, 1) 0%,
+    rgba(19, 25, 55, 1) 59%
+  );
+
+  /* safari 5.1+,chrome 10+ */
+  background: -webkit-linear-gradient(
+    330deg,
+    rgba(10, 10, 10, 1) 0%,
+    rgba(19, 25, 55, 1) 59%
+  );
+
+  /* opera 11.10+ */
+  background: -o-linear-gradient(
+    330deg,
+    rgba(10, 10, 10, 1) 0%,
+    rgba(19, 25, 55, 1) 59%
+  );
+
+  /* ie 6-9 */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0A0A0A', endColorstr='#131937', GradientType=1 );
+
+  /* ie 10+ */
+  background: -ms-linear-gradient(
+    330deg,
+    rgba(10, 10, 10, 1) 0%,
+    rgba(19, 25, 55, 1) 59%
+  );
+
+  /* global 94%+ browsers support */
+  background: linear-gradient(
+    330deg,
+    rgba(10, 10, 10, 1) 0%,
+    rgba(19, 25, 55, 1) 59%
+  );
+}
+
+.gradient__text {
+  background: linear-gradient(89.97deg, #ae67fa 1.84%, #f49867 102.67%) !important;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

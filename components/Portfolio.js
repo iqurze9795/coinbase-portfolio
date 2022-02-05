@@ -8,9 +8,7 @@ function Portfolio() {
   return (
     <Wrapper>
       <Content>
-        <Chart>
-          <CoinPrice />
-        </Chart>
+        <CoinPrice />
         <PortfolioTable>
           <TableItem>
             <Title>Your Assets</Title>
@@ -55,7 +53,7 @@ const Wrapper = styled.div`
 `
 const Content = styled.div`
   width: 100%;
-  max-height: 1000px;
+  /* max-height: 1000px; */
   padding: 2rem 1rem;
 `
 const Chart = styled.div`

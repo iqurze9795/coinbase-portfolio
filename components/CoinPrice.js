@@ -1,58 +1,77 @@
 import React from 'react'
-import { Line } from 'react-chartjs-2'
 import styled from 'styled-components'
-
+import { Doughnut } from 'react-chartjs-2'
+import Image from 'next/image'
+import MoonbeamIcon from '../assets/coin-icon/moonbeam.png'
+import { FiChevronsUp } from 'react-icons/fi'
+import 'chart.js/auto'
+import CustomChart from './CustomChart'
 const CoinPrice = () => {
-  const data = {
-    labels: [
-      'Jan',
-      'Feb',
-      'Mar',
-      'Apr',
-      'May',
-      'June',
-      'July',
-      'Aug',
-      'Sep',
-      'Oct',
-      'Nov',
-      'Dec',
-    ],
-    datasets: [
-      {
-        fill: false,
-        lineTension: 0.1,
-        backgroundColor: '#3773f5',
-        borderColor: '#3773f5',
-        borderCapStyle: 'butt',
-        borderDash: [],
-        borderDashOffset: 0.0,
-        borderjoinStyle: 'miter',
-        pointBorderColor: '#3773f5',
-        pointBackgroundColor: '#3773f5',
-        pointBorderWidth: 1,
-        pointHoverRadius: 5,
-        pointHoverBackgroundColor: '#3773f5',
-        pointHoverBorderWidth: 2,
-        pointRadius: 1,
-        pointHitRadius: 10,
-        data: [65, 59, 80, 81, 56, 72, 45, 67, 55, 42],
-      },
-    ],
-  }
-  const options = {
-    plugins: {
-      legend: {
-        display: false,
-      },
-    },
-  }
   return (
     <Wrapper>
-      <Line data={data} options={options} width={400}></Line>
+      <Card>
+        <PriceContainer>
+          <Image src={MoonbeamIcon}></Image>
+          <div>
+            <Price style={{ color: '#6CE25D' }}>
+              $50.82 <FiChevronsUp />
+            </Price>
+            <PriceChange style={{ color: '#ED0528' }}>
+              +11.7$ (13.52%)
+            </PriceChange>
+          </div>
+        </PriceContainer>
+        <CoinTitle>Moonbeam</CoinTitle>
+        <CoinSubTitle>GLMR</CoinSubTitle>
+        <CustomChart />
+      </Card>
     </Wrapper>
   )
 }
 
 export default CoinPrice
-const Wrapper = styled.div``
+
+const Wrapper = styled.div`
+  /* padding-right: 1rem; */
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+`
+
+const Card = styled.div`
+  width: 100%;
+  height: 35rem;
+  border: 1px solid #282b2f;
+  margin-bottom: 1rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+`
+const PriceContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`
+const Price = styled.div`
+  font-size: 3rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+`
+
+const PriceChange = styled.div`
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: flex-end;
+`
+const CoinTitle = styled.div`
+  font-size: 2rem;
+  margin-top: 2rem;
+  font-weight: 700;
+`
+const CoinSubTitle = styled.div`
+  font-size: 1rem;
+  color: darkgray;
+`

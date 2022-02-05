@@ -47,6 +47,9 @@ const Wrapper = styled.div`
   width: calc(20rem - 16px - 16px);
   border: none;
   padding: 0 1rem;
+  @media screen and (max-width: 750px) {
+    display: none;
+  }
 `
 const LogoContainer = styled.div`
   margin: 1.5rem 0;
