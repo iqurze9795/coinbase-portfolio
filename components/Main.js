@@ -15,8 +15,12 @@ export default Main
 
 const Wrapper = styled.div`
   display: flex;
-  /* max-height: calc(100vh - 64px); */
+  max-height: calc(100vh - 64px);
   overflow: hidden;
+  overflow-y: scroll; /// เยดโด้วววว!!
+  ::-webkit-scrollbar {
+    display: none;
+  }
   & div {
     border-radius: 0.4rem;
   }

@@ -32,9 +32,9 @@ const Networth = () => {
   return (
     <Wrapper>
       <Card>
-        <Title>NET WORTH</Title>
+        <Title>YOUR NET WORTH</Title>
         <h1 className="gradient__text">470,000$</h1>
-        <Description>Holding 4 Assets</Description>
+        <Description>With Holding 4 Assets</Description>
         <PlaceHolder />
       </Card>
       <Card style={{ height: '20rem' }}>

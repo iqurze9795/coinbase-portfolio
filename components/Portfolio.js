@@ -3,7 +3,7 @@ import { BsThreeDotsVertical } from 'react-icons/bs'
 import styled from 'styled-components'
 import { coins } from '../static/coins'
 import Coin from './Coin'
-import BalanceChart from './BalanceChart'
+import CoinPriceChart from './CoinPriceChart'
 import MoonbeamIcon from '../assets/coin-icon/moonbeam.png'
 import { FiChevronsUp } from 'react-icons/fi'
 import Image from 'next/image'
@@ -13,18 +13,18 @@ function Portfolio() {
       <Content>
         <Chart>
           <div>
-            <Balance>
-              <BalanceTitle>
+            <CoinPrice>
+              <CoinPriceTitle>
                 <Image width={50} height={50} src={MoonbeamIcon} />
                 <p style={{ paddingLeft: '10px' }}>Moonbeam (GLMR)</p>
-              </BalanceTitle>
-              <BalanceValue>{'$'} 18.98</BalanceValue>
+              </CoinPriceTitle>
+              <CoinPriceValue>{'$'} 18.98</CoinPriceValue>
               <PercentChange>
                 +5$ <FiChevronsUp />
               </PercentChange>
-            </Balance>
+            </CoinPrice>
           </div>
-          <BalanceChart />
+          <CoinPriceChart />
         </Chart>
 
         <PortfolioTable>
@@ -80,16 +80,16 @@ const Chart = styled.div`
   padding: 1rem 2rem;
 `
 
-const Balance = styled.div``
+const CoinPrice = styled.div``
 
-const BalanceTitle = styled.div`
+const CoinPriceTitle = styled.div`
   color: #8a919e;
   font-size: 0.9rem;
   display: flex;
   align-items: center;
   justify-content: flex-end;
 `
-const BalanceValue = styled.div`
+const CoinPriceValue = styled.div`
   color: #11ef68;
   display: flex;
   align-items: center;

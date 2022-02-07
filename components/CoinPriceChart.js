@@ -66,7 +66,7 @@ const series = [
     data: [30, 40, 35, 50, 49, 60, 70, 91, 125],
   },
 ]
-const BalanceChart = () => {
+const CoinPriceChart = () => {
   return (
     <Wrapper>
       <Chart
@@ -80,6 +80,6 @@ const BalanceChart = () => {
   )
 }
 
-export default BalanceChart
+export default CoinPriceChart
 
 const Wrapper = styled.div``
