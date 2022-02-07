@@ -1,7 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Doughnut } from 'react-chartjs-2'
+import { Doughnut, Bar } from 'react-chartjs-2'
+import Image from 'next/image'
 import 'chart.js/auto'
+import MoonbeamIcon from '../assets/coin-icon/moonbeam.png'
+import MoonriverIcon from '../assets/coin-icon/moonriver.png'
 
 const Networth = () => {
   const data = {
@@ -15,6 +18,32 @@ const Networth = () => {
         hoverOffset: 4,
       },
     ],
+  }
+  const networkData = {
+    labels: ['Movr', 'GLMR'],
+    datasets: [
+      {
+        data: [300, 100],
+        backgroundColor: ['#D93780', '#E8B840'],
+        borderColor: 'none',
+        color: '#FFFFFF',
+        hoverOffset: 4,
+      },
+    ],
+  }
+  const networkOptions = {
+    plugins: {
+      legend: {
+        display: false,
+        labels: {
+          // This more specific font property overrides the global property
+          font: {
+            size: 14,
+          },
+          color: 'white',
+        },
+      },
+    },
   }
   const options = {
     plugins: {
@@ -37,6 +66,14 @@ const Networth = () => {
         <Description>With Holding 4 Assets</Description>
         <PlaceHolder />
       </Card>
+      <ChainWrapper>
+        <p>Network allocation</p>
+        <ChainLogo>
+          <Image src={MoonbeamIcon} width={60} height={60} />
+          <Image src={MoonriverIcon} width={60} height={60} />
+        </ChainLogo>
+        <Bar data={networkData} options={networkOptions}></Bar>
+      </ChainWrapper>
       <Card style={{ height: '20rem' }}>
         <Title>Allocation</Title>
         <Doughnut style={{ padding: '2rem' }} data={data} options={options} />
@@ -62,6 +99,23 @@ const Card = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
+`
+const ChainWrapper = styled.div`
+  width: 21rem;
+  height: 20rem;
+  border: 1px solid #282b2f;
+  margin-bottom: 1rem;
+  padding: 1.5rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: column;
+`
+const ChainLogo = styled.div`
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  padding-bottom: 1.5rem;
 `
 const Title = styled.div`
   font-weight: 500;

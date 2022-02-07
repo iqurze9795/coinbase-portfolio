@@ -1,13 +1,12 @@
 import {
   AiOutlinePieChart,
   AiOutlinePlusCircle,
-  AiOutlineGift,
   AiFillEdit,
 } from 'react-icons/ai'
-import { BiTrendingUp } from 'react-icons/bi'
-import { RiCoinsLine, RiNotification3Line } from 'react-icons/ri'
-import { MdWeb } from 'react-icons/md'
-import { BsPersonPlus } from 'react-icons/bs'
+import { RiCoinsLine } from 'react-icons/ri'
+import { MdOutlineAnchor } from 'react-icons/md'
+import { GrAnchor } from 'react-icons/gr'
+import { BsPiggyBank } from 'react-icons/bs'
 
 export const navItems = [
   {
@@ -24,11 +23,11 @@ export const navItems = [
   },
   {
     title: 'Staking',
-    icon: <MdWeb size={32} />,
+    icon: <BsPiggyBank size={32} />,
   },
   {
     title: 'Defi Board',
-    icon: <AiOutlinePlusCircle size={32} />,
+    icon: <MdOutlineAnchor size={32} />,
   },
   // {
   //   title: 'Notifications',
