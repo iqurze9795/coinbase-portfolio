@@ -63,7 +63,7 @@ const options = {
 const series = [
   {
     name: 'Moonbeam',
-    data: [30, 40, 35, 50, 49, 60, 70, 91, 125],
+    data: [100, 40, 35, 50, 49, 60, 70, 91, 125],
   },
 ]
 const CoinPriceChart = () => {
