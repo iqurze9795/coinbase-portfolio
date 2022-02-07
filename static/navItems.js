@@ -11,25 +11,25 @@ import { BsPersonPlus } from 'react-icons/bs'
 
 export const navItems = [
   {
-    title: 'Assets',
+    title: 'Dashboard',
     icon: <AiOutlinePieChart size={32} />,
   },
   {
     title: 'Allowance',
     icon: <AiFillEdit size={32} />,
   },
-  // {
-  //   title: 'Pay',
-  //   icon: <RiCoinsLine />,
-  // },
-  // {
-  //   title: 'For You',
-  //   icon: <MdWeb />,
-  // },
-  // {
-  //   title: 'Learn and earn',
-  //   icon: <AiOutlinePlusCircle />,
-  // },
+  {
+    title: 'Transaction',
+    icon: <RiCoinsLine size={32} />,
+  },
+  {
+    title: 'Staking',
+    icon: <MdWeb size={32} />,
+  },
+  {
+    title: 'Defi Board',
+    icon: <AiOutlinePlusCircle size={32} />,
+  },
   // {
   //   title: 'Notifications',
   //   icon: <RiNotification3Line />,

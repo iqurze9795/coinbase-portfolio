@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import MoonbeamLogo from '../assets/moonbeam-logo.png'
 import Image from 'next/image'
 import { navItems } from '../static/navItems'
+import { SiTwitter, SiGithub, SiTelegram } from 'react-icons/si'
 
 const Sidebar = () => {
   const [activeIcon, setActiveIcon] = useState(navItems[0].title)
@@ -35,6 +36,12 @@ const Sidebar = () => {
           )
         })}
       </NavItemsContainer>
+      <Divider />
+      <GitHub>
+        <SiGithub size={30} />
+        <SiTwitter size={30} />
+        <SiTelegram size={30} />
+      </GitHub>
     </Wrapper>
   )
 }
@@ -42,9 +49,12 @@ const Sidebar = () => {
 export default Sidebar
 
 const Wrapper = styled.div`
-  height: calc() 100vh;
+  /* height: calc() 100vh; */
+  display: flex;
+  flex-direction: column;
   border-right: 1px solid #282b2f;
-  width: calc(20rem - 16px - 16px);
+  min-width: 16.5rem;
+  width: 16.5rem;
   border: none;
   padding: 0 1rem;
   @media screen and (max-width: 750px) {
@@ -54,12 +64,24 @@ const Wrapper = styled.div`
 const LogoContainer = styled.div`
   margin: 1.5rem 0;
 `
+const GitHub = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  padding: 1.2rem;
+`
+const Divider = styled.div`
+  width: 100%;
+  border: solid #282b2f 1px;
+`
 const Logo = styled.div`
   width: 90%;
   object-fit: contain;
 `
 const NavItemsContainer = styled.div`
   margin-top: 3rem;
+  flex: 1 1 0%;
   &:hover {
     cursor: pointer;
   }
@@ -67,7 +89,7 @@ const NavItemsContainer = styled.div`
 const NavItem = styled.div`
   display: flex;
   align-items: center;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 500;
   margin-bottom: 1.5rem;
   height: 3.5rem;

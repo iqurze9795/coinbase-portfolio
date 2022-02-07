@@ -4,7 +4,7 @@ import styled from 'styled-components'
 const Header = ({ walletAddress }) => {
   return (
     <Wrapper>
-      <Title>Assets</Title>
+      <Title>Dashboard</Title>
       <ButtonsContainer>
         <WalletLink>
           <WalletLinkTitle>Wallet Connected</WalletLinkTitle>
