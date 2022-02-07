@@ -100,3 +100,8 @@ a {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+.apexcharts-tooltip {
+  background: #0C0D12;
+  color: #D03478;
+}

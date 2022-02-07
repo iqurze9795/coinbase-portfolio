@@ -46,20 +46,11 @@ function CustomChart() {
       },
       labels: { show: false },
     },
-    yaxis: [
-      {
-        y: 0,
-        offsetX: 0,
-        offsetY: 0,
-        padding: {
-          left: 0,
-          right: 0,
-        },
-      },
-    ],
+    yaxis: {
+      show: false,
+    },
     tooltip: {
       x: { show: false },
-      theme: "dark"
     },
     theme: {
       monochrome: {
@@ -72,7 +63,7 @@ function CustomChart() {
   }
   const series = [
     {
-      name: 'series-1',
+      name: 'Moonbeam',
       data: [30, 40, 35, 50, 49, 60, 70, 91, 125],
     },
   ]
@@ -83,7 +74,7 @@ function CustomChart() {
         series={series}
         type="area"
         width="100%"
-        height={320}
+        height={200}
       />
     </Wrapper>
   )

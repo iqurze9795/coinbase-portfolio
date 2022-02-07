@@ -3,12 +3,11 @@ import { BsThreeDotsVertical } from 'react-icons/bs'
 import styled from 'styled-components'
 import { coins } from '../static/coins'
 import Coin from './Coin'
-import CoinPrice from './CoinPrice'
+import ChainInfo from './ChainInfo'
 function Portfolio() {
   return (
     <Wrapper>
       <Content>
-        <CoinPrice />
         <PortfolioTable>
           <TableItem>
             <Title>Your Assets</Title>
@@ -51,6 +50,7 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: center;
 `
+
 const Content = styled.div`
   width: 100%;
   /* max-height: 1000px; */

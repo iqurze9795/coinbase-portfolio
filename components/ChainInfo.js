@@ -11,7 +11,10 @@ const CoinPrice = () => {
     <Wrapper>
       <Card>
         <PriceContainer>
-          <Image src={MoonbeamIcon}></Image>
+          <div>
+            <Image width={50} height={50} src={MoonbeamIcon} />
+          </div>
+
           <div>
             <Price style={{ color: '#6CE25D' }}>
               $50.82 <FiChevronsUp />
@@ -40,10 +43,10 @@ const Wrapper = styled.div`
 
 const Card = styled.div`
   width: 100%;
-  height: 35rem;
-  border: 1px solid #282b2f;
+  height: 19rem;
+  /* border: 1px solid #282b2f; */
   margin-bottom: 1rem;
-  padding: 1.5rem;
+  /* padding: 1.5rem; */
   display: flex;
   flex-direction: column;
 `
@@ -53,7 +56,7 @@ const PriceContainer = styled.div`
   justify-content: space-between;
 `
 const Price = styled.div`
-  font-size: 3rem;
+  font-size: 1.5rem;
   font-weight: bold;
   display: flex;
   align-items: center;
@@ -61,17 +64,17 @@ const Price = styled.div`
 `
 
 const PriceChange = styled.div`
-  font-size: 1.5rem;
+  font-size: 0.8rem;
   font-weight: bold;
   display: flex;
   justify-content: flex-end;
 `
 const CoinTitle = styled.div`
-  font-size: 2rem;
+  font-size: 1rem;
   margin-top: 2rem;
   font-weight: 700;
 `
 const CoinSubTitle = styled.div`
-  font-size: 1rem;
+  font-size: 0.5rem;
   color: darkgray;
 `
