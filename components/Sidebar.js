@@ -4,6 +4,7 @@ import MoonbeamLogo from '../assets/moonbeam-logo.png'
 import Image from 'next/image'
 import { navItems } from '../static/navItems'
 import { SiTwitter, SiGithub, SiTelegram } from 'react-icons/si'
+import { Router } from 'next/router'
 
 const Sidebar = () => {
   const [activeIcon, setActiveIcon] = useState(navItems[0].title)
@@ -38,9 +39,18 @@ const Sidebar = () => {
       </NavItemsContainer>
       <Divider />
       <GitHub>
-        <SiGithub size={30} />
-        <SiTwitter size={30} />
-        <SiTelegram size={30} />
+        <a
+          href="https://github.com/iqurze9795/moonbeam-portfolio"
+          target="_blank"
+        >
+          <SiGithub size={30} />
+        </a>
+        <a href="https://twitter.com/MoonbeamNetwork" target="_blank">
+          <SiTwitter size={30} />
+        </a>
+        <a href="https://t.me/Moonbeam_Official" target="_blank">
+          <SiTelegram size={30} />
+        </a>
       </GitHub>
     </Wrapper>
   )
