@@ -1,23 +1,28 @@
 import React from 'react'
 import styled from 'styled-components'
-
+import Image from 'next/image'
+import MoonbeamIcon from '../assets/coin-icon/moonbeam.png'
 const Header = ({ walletAddress }) => {
   return (
     <Wrapper>
       <Title>Dashboard</Title>
       <ButtonsContainer>
-        <WalletLink>
-          <WalletLinkTitle>Wallet Connected</WalletLinkTitle>
-          <WalletAddress>
-            {walletAddress.slice(0, 7)} ... {walletAddress.slice(35)}
-          </WalletAddress>
-        </WalletLink>
-        <Button style={{ backgroundColor: '#3773f5', color: '#000' }}>
+        <WalletWrapper>
+          <Image width={48} height={30} src={MoonbeamIcon} />
+          <WalletLink>
+            <WalletLinkTitle>Wallet Connected</WalletLinkTitle>
+            <WalletAddress>
+              {walletAddress.slice(0, 7)} ... {walletAddress.slice(35)}
+            </WalletAddress>
+          </WalletLink>
+        </WalletWrapper>
+
+        {/* <Button style={{ backgroundColor: '#3773f5', color: '#000' }}>
           Buy / Sell
         </Button>
         <Button style={{ backgroundColor: '#3773f5', color: '#000' }}>
           Send / Receive
-        </Button>
+        </Button> */}
       </ButtonsContainer>
     </Wrapper>
   )
@@ -26,7 +31,7 @@ const Header = ({ walletAddress }) => {
 export default Header
 
 const Wrapper = styled.div`
-  width: calc(100% - 3rem);
+  width: calc(100%);
   padding: 1rem 1.5rem;
   border-bottom: 1px solid #282b2f;
   display: flex;
@@ -51,13 +56,19 @@ const Button = styled.div`
     cursor: pointer;
   }
 `
-const WalletLink = styled.div`
-  font-size: 0.8rem;
+const WalletWrapper = styled.div`
+  display: flex;
+  justify-content: center;
   border: 1px solid #282b2f;
+  height: 3.4rem;
   border-radius: 50rem;
   font-size: 1.2rem;
-  margin-right: 1rem;
-  padding: 0 1rem;
+  /* margin-right: 1rem; */
+  padding: 0 2rem;
+`
+const WalletLink = styled.div`
+  font-size: 0.8rem;
+  padding-left: 0.5rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;

@@ -20,7 +20,7 @@ const Networth = () => {
     ],
   }
   const networkData = {
-    labels: ['Movr', 'GLMR'],
+    labels: ['GLMR', 'MOVR'],
     datasets: [
       {
         data: [300, 100],
@@ -68,10 +68,6 @@ const Networth = () => {
       </Card>
       <ChainWrapper>
         <p>Network allocation</p>
-        <ChainLogo>
-          <Image src={MoonbeamIcon} width={60} height={60} />
-          <Image src={MoonriverIcon} width={60} height={60} />
-        </ChainLogo>
         <Bar data={networkData} options={networkOptions}></Bar>
       </ChainWrapper>
       <Card style={{ height: '20rem' }}>
@@ -102,7 +98,7 @@ const Card = styled.div`
 `
 const ChainWrapper = styled.div`
   width: 21rem;
-  height: 20rem;
+  height: 16rem;
   border: 1px solid #282b2f;
   margin-bottom: 1rem;
   padding: 1.5rem;
@@ -111,12 +107,7 @@ const ChainWrapper = styled.div`
   justify-content: space-between;
   flex-direction: column;
 `
-const ChainLogo = styled.div`
-  display: flex;
-  width: 100%;
-  justify-content: space-evenly;
-  padding-bottom: 1.5rem;
-`
+
 const Title = styled.div`
   font-weight: 500;
   font-size: 1rem;
