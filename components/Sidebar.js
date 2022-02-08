@@ -9,7 +9,7 @@ import { Router } from 'next/router'
 const Sidebar = () => {
   const [activeIcon, setActiveIcon] = useState(navItems[0].title)
   return (
-    <Wrapper className="bg-second-gradient">
+    <Wrapper>
       <LogoContainer>
         <Logo>
           <Image src={MoonbeamLogo}></Image>
@@ -38,7 +38,7 @@ const Sidebar = () => {
         })}
       </NavItemsContainer>
       <Divider />
-      <GitHub>
+      <Social>
         <a
           href="https://github.com/iqurze9795/moonbeam-portfolio"
           target="_blank"
@@ -51,7 +51,7 @@ const Sidebar = () => {
         <a href="https://t.me/Moonbeam_Official" target="_blank">
           <SiTelegram size={30} />
         </a>
-      </GitHub>
+      </Social>
     </Wrapper>
   )
 }
@@ -59,13 +59,13 @@ const Sidebar = () => {
 export default Sidebar
 
 const Wrapper = styled.div`
-  /* height: calc() 100vh; */
+  height: calc() 100vh;
   display: flex;
   flex-direction: column;
   border-right: 1px solid #282b2f;
   min-width: 16.5rem;
   width: 16.5rem;
-  border: none;
+  /* border: none; */
   padding: 0 1rem;
   @media screen and (max-width: 750px) {
     display: none;
@@ -74,11 +74,11 @@ const Wrapper = styled.div`
 const LogoContainer = styled.div`
   margin: 1.5rem 0;
 `
-const GitHub = styled.div`
+const Social = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 1.5rem;
+  /* margin-bottom: 1.5rem; */
   padding: 1.2rem;
 `
 const Divider = styled.div`
