@@ -23,7 +23,7 @@ const Networth = () => {
     labels: ['GLMR', 'MOVR'],
     datasets: [
       {
-        data: [300, 100],
+        data: [300000, 1000000],
         backgroundColor: ['#D93780', '#E8B840'],
         borderColor: 'none',
         color: '#FFFFFF',
@@ -67,11 +67,11 @@ const Networth = () => {
         <PlaceHolder />
       </Card>
       <ChainWrapper>
-        <p>Network allocation</p>
+        <p>Network Allocation ($)</p>
         <Bar data={networkData} options={networkOptions}></Bar>
       </ChainWrapper>
       <Card style={{ height: '20rem' }}>
-        <Title>Allocation</Title>
+        <Title>Coin Allocation</Title>
         <Doughnut style={{ padding: '2rem' }} data={data} options={options} />
         <PlaceHolder />
       </Card>
@@ -103,7 +103,7 @@ const ChainWrapper = styled.div`
   margin-bottom: 1rem;
   padding: 1.5rem;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
   flex-direction: column;
 `

@@ -3,10 +3,10 @@ import { useWeb3 } from '@3rdweb/hooks'
 import Dashboard from './Dashboard'
 
 export default function Home() {
-  const { address, connectWallet } = useWeb3()
+  // const { address, connectWallet } = useWeb3()
   return (
     <Wrapper>
-      {address ? (
+      {/* {address ? (
         <Dashboard address={address} />
       ) : (
         <WalletConnect>
@@ -17,7 +17,8 @@ export default function Home() {
             You need Chrome to be <br /> able to run this app.
           </Details>
         </WalletConnect>
-      )}
+      )} */}
+      <Dashboard address={"0xc55ea7249b032f1c0bc4f8d8fc2a3b147fbbc1bb"} />
     </Wrapper>
   )
 }

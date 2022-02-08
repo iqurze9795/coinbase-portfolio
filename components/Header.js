@@ -7,7 +7,7 @@ const Header = ({ walletAddress }) => {
     <Wrapper>
       <Title>Dashboard</Title>
       <ButtonsContainer>
-        <WalletWrapper>
+        {/* <WalletWrapper>
           <Image width={48} height={30} src={MoonbeamIcon} />
           <WalletLink>
             <WalletLinkTitle>Wallet Connected</WalletLinkTitle>
@@ -15,7 +15,7 @@ const Header = ({ walletAddress }) => {
               {walletAddress.slice(0, 7)} ... {walletAddress.slice(35)}
             </WalletAddress>
           </WalletLink>
-        </WalletWrapper>
+        </WalletWrapper> */}
 
         {/* <Button style={{ backgroundColor: '#3773f5', color: '#000' }}>
           Buy / Sell
