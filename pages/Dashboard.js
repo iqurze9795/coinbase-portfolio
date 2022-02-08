@@ -18,7 +18,6 @@ const Dashboard = ({ address }) => {
 export default Dashboard
 const Wrapper = styled.div`
   display: flex;
-  /* padding-bottom: 20rem; */
   min-height: 100vh;
   width: 100vw;
   color: white;

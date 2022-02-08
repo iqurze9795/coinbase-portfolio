@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { CgSearch } from 'react-icons/cg'
 import Image from 'next/image'
 import MoonbeamIcon from '../assets/coin-icon/moonbeam.png'
 const Header = ({ walletAddress }) => {
@@ -7,6 +8,11 @@ const Header = ({ walletAddress }) => {
     <Wrapper>
       <Title>Dashboard</Title>
       <ButtonsContainer>
+        <InputIcon>
+          <CgSearch size={26} color="#282b2f" />
+          <SearchBox placeholder="Paste your address..."></SearchBox>
+        </InputIcon>
+
         {/* <WalletWrapper>
           <Image width={48} height={30} src={MoonbeamIcon} />
           <WalletLink>
@@ -32,7 +38,7 @@ export default Header
 
 const Wrapper = styled.div`
   width: calc(100%);
-  padding: 1rem 1.5rem;
+  padding: 1rem 1rem;
   /* margin-top: 1.5rem; */
   border-bottom: 1px solid #282b2f;
   display: flex;
@@ -45,6 +51,29 @@ const Title = styled.div`
 `
 const ButtonsContainer = styled.div`
   display: flex;
+`
+
+const InputIcon = styled.div`
+  display: flex;
+  width: 100%;
+  margin-bottom: 10px;
+  align-items: center;
+
+  & > svg {
+    margin-left: 10px;
+    position: absolute;
+  }
+`
+const SearchBox = styled.input`
+  display: flex;
+  height: 3rem;
+  width: 30rem;
+  background: transparent;
+  border: solid 1px #282b2f;
+  color: white;
+  font-size: 1rem;
+  padding-left: 2.5rem;
+  border-radius: 20px;
 `
 const Button = styled.div`
   border: 1px solid #282b2f;
