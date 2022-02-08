@@ -48,8 +48,8 @@ function Portfolio() {
             <div>
               {coins.map((coin, index) => {
                 return (
-                  <div>
-                    <Coin coin={coin} key={index} />
+                  <div key={coin.name}>
+                    <Coin coin={coin} />
                     <Divider />
                   </div>
                 )
