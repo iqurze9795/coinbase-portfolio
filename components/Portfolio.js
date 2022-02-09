@@ -1,12 +1,13 @@
 import React from 'react'
-import { BsThreeDotsVertical } from 'react-icons/bs'
 import styled from 'styled-components'
-import { coins } from '../static/coins'
 import Coin from './Coin'
 import CoinPriceChart from './CoinPriceChart'
 import MoonbeamIcon from '../assets/coin-icon/moonbeam.png'
+import { BsThreeDotsVertical } from 'react-icons/bs'
 import { FiChevronsUp } from 'react-icons/fi'
+import { coins } from '../static/coins'
 import Image from 'next/image'
+import ChainInfo from './ChainInfo'
 function Portfolio() {
   return (
     <Wrapper>
@@ -18,15 +19,15 @@ function Portfolio() {
                 <Image width={50} height={50} src={MoonbeamIcon} />
                 <p style={{ paddingLeft: '10px' }}>Moonbeam (GLMR)</p>
               </CoinPriceTitle>
-              <CoinPriceValue>{'$'} 18.98</CoinPriceValue>
+              <CoinPriceValue>{'$'} 5.98</CoinPriceValue>
               <PercentChange>
-                +5$ <FiChevronsUp />
+                +0.5$ (10%) <FiChevronsUp />
               </PercentChange>
             </CoinPrice>
           </div>
           <CoinPriceChart />
         </Chart>
-
+        <ChainInfo />
         <PortfolioTable>
           <TableItem>
             <Title>Your Assets</Title>
@@ -67,7 +68,7 @@ export default Portfolio
 const Wrapper = styled.div`
   flex: 1;
   display: flex;
-  justify-content: center;
+  justify-content: end;
 `
 const Content = styled.div`
   width: 100%;
@@ -99,7 +100,8 @@ const CoinPriceValue = styled.div`
   /* margin: 0.5rem 0; */
 `
 const PercentChange = styled.div`
-  color: #ef1111;
+  /* color: #ef1111; */
+  color: #11ef68;
   display: flex;
   align-items: center;
   font-size: 1.5rem;

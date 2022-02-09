@@ -8,10 +8,10 @@ const Header = ({ walletAddress }) => {
     <Wrapper>
       <Title>Dashboard</Title>
       <ButtonsContainer>
-        <InputIcon>
+        <InputWrapper>
           <CgSearch size={26} color="#282b2f" />
           <SearchBox placeholder="Paste your address..."></SearchBox>
-        </InputIcon>
+        </InputWrapper>
 
         {/* <WalletWrapper>
           <Image width={48} height={30} src={MoonbeamIcon} />
@@ -53,14 +53,12 @@ const ButtonsContainer = styled.div`
   display: flex;
 `
 
-const InputIcon = styled.div`
+const InputWrapper = styled.div`
   display: flex;
   width: 100%;
-  margin-bottom: 10px;
   align-items: center;
-
   & > svg {
-    margin-left: 10px;
+    margin-left: 15px;
     position: absolute;
   }
 `
@@ -72,7 +70,7 @@ const SearchBox = styled.input`
   border: solid 1px #282b2f;
   color: white;
   font-size: 1rem;
-  padding-left: 2.5rem;
+  padding-left: 4rem;
   border-radius: 20px;
 `
 const Button = styled.div`

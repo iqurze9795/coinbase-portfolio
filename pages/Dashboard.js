@@ -9,7 +9,9 @@ const Dashboard = ({ address }) => {
       <Sidebar />
       <MainContainer>
         <Header walletAddress={address} />
-        <Main />
+        <MainWrapper>
+          <Main />
+        </MainWrapper>
       </MainContainer>
     </Wrapper>
   )
@@ -25,4 +27,9 @@ const Wrapper = styled.div`
 `
 const MainContainer = styled.div`
   flex: 1;
+`
+const MainWrapper = styled.div`
+  display: flex;
+  width: 100%;
+  justify-content: center;
 `
