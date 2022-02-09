@@ -3,6 +3,8 @@ import { BsThreeDotsVertical } from 'react-icons/bs'
 import Image from 'next/image'
 import styled from 'styled-components'
 import { coins } from '../static/coins'
+import MoonbeamLogo from '../assets/coin-icon/moonbeam.png'
+import MoonriverLogo from '../assets/coin-icon/moonriver.png'
 const Coin = ({ coin }) => {
   return (
     <Wrapper>
@@ -21,6 +23,14 @@ const Coin = ({ coin }) => {
         <div style={{ flex: 2 }}>
           <Primary>
             {'$'} {coin.balanceUsd}
+            <ChainLogo>
+              <Image
+                src={coin.chain === 'moonbeam' ? MoonbeamLogo : MoonriverLogo}
+                alt={coin.name}
+                width={15}
+                height={15}
+              />
+            </ChainLogo>
           </Primary>
           <Secondary>
             {coin.balanceCoin} {coin.sign}
@@ -68,6 +78,12 @@ const CoinIcon = styled.div`
 `
 const Primary = styled.div`
   margin-bottom: 0.1rem;
+  display: flex;
+`
+const ChainLogo = styled.div`
+  display: flex;
+  align-items: center;
+  margin-left: 2px;
 `
 const Secondary = styled.div`
   color: #8a919e;

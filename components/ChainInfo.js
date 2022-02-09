@@ -25,7 +25,7 @@ const ChainInfo = () => {
         <ChainWrapper>
           <Title>Staked Value</Title>
           <Description className="gradient__text">
-            ~ 30M GLMR (3%)
+            ~ 30.33M GLMR
           </Description>
         </ChainWrapper>
       </Card>

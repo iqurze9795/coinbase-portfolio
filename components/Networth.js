@@ -63,7 +63,7 @@ const Networth = () => {
       <Card>
         <Title>YOUR NET WORTH</Title>
         <h1 className="gradient__text">470,000$</h1>
-        <Description>With Holding 4 Assets</Description>
+        <Description>With Holding 18 Assets</Description>
         <PlaceHolder />
       </Card>
       <ChainWrapper>
