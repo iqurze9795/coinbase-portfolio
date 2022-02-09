@@ -1,10 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Doughnut, Bar } from 'react-chartjs-2'
-import Image from 'next/image'
 import 'chart.js/auto'
-import MoonbeamIcon from '../assets/coin-icon/moonbeam.png'
-import MoonriverIcon from '../assets/coin-icon/moonriver.png'
 
 const Networth = () => {
   const data = {
@@ -62,7 +59,7 @@ const Networth = () => {
     <Wrapper>
       <Card>
         <Title>YOUR NET WORTH</Title>
-        <h1 className="gradient__text">470,000$</h1>
+        <h1 className="gradient__text">$470,000</h1>
         <Description>With Holding 18 Assets</Description>
         <PlaceHolder />
       </Card>

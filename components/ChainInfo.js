@@ -1,10 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Doughnut, Bar } from 'react-chartjs-2'
-import Image from 'next/image'
 import 'chart.js/auto'
-import MoonbeamIcon from '../assets/coin-icon/moonbeam.png'
-import MoonriverIcon from '../assets/coin-icon/moonriver.png'
 
 const ChainInfo = () => {
   return (
@@ -24,17 +20,13 @@ const ChainInfo = () => {
       <Card style={{ borderLeft: '8px solid #97A0E3' }}>
         <ChainWrapper>
           <Title>Staked Value</Title>
-          <Description className="gradient__text">
-            ~ 30.33M GLMR
-          </Description>
+          <Description className="gradient__text">~ 30.33M GLMR</Description>
         </ChainWrapper>
       </Card>
       <Card style={{ borderLeft: '8px solid #E3C697' }}>
         <ChainWrapper>
           <Title>Holders</Title>
-          <Description className="gradient__text">
-            103,248
-          </Description>
+          <Description className="gradient__text">103,248</Description>
         </ChainWrapper>
       </Card>
     </Wrapper>

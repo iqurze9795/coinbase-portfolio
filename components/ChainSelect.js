@@ -7,11 +7,23 @@ const ChainSelect = () => {
   const [activeChain, setActiveChain] = useState('moonbeam')
   return (
     <Wrapper>
-      <Button style={{ background: 'white', color: 'black' }}>
+      <Button
+        onClick={() => setActiveChain('moonbeam')}
+        style={{
+          background: activeChain === 'moonbeam' ? 'white' : 'transparent',
+          color: activeChain === 'moonbeam' ? 'black' : 'white',
+        }}
+      >
         <Image src={MoonbeamLogo} width={16} height={16} />
         <span>Moonbeam</span>
       </Button>
-      <Button>
+      <Button
+        onClick={() => setActiveChain('moonriver')}
+        style={{
+          background: activeChain === 'moonriver' ? 'white' : 'transparent',
+          color: activeChain === 'moonriver' ? 'black' : 'white',
+        }}
+      >
         <Image src={MoonriverLogo} width={16} height={16} />
         <span>Moonriver</span>
       </Button>

@@ -72,4 +72,5 @@ export const coins = [
     change: 12,
     allocation: 7.3,
   },
+
 ]
