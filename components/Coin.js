@@ -9,7 +9,7 @@ const Coin = ({ coin }) => {
   return (
     <Wrapper>
       <div>
-        <div style={{ flex: 3 }}>
+        <div style={{ flex: 2 }}>
           <NameCol>
             <CoinIcon>
               <Image src={coin.logo} alt={coin.name} />
@@ -36,7 +36,7 @@ const Coin = ({ coin }) => {
             {coin.balanceCoin} {coin.sign}
           </Secondary>
         </div>
-        <div style={{ flex: 1 }}>
+        <div style={{ flex: 2 }}>
           {'$'}
           {coin.priceUsd}
           <div style={{ color: coin.change < 0 ? 'red' : 'green' }}>

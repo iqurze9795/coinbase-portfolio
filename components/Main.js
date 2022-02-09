@@ -6,10 +6,8 @@ import ChainInfo from './ChainInfo'
 const Main = () => {
   return (
     <Wrapper>
-      
       <Portfolio />
       <Networth />
-      {/* <ChainInfo /> */}
     </Wrapper>
   )
 }

@@ -8,23 +8,23 @@ import { FiChevronsUp } from 'react-icons/fi'
 import { coins } from '../static/coins'
 import Image from 'next/image'
 import ChainInfo from './ChainInfo'
+import ChainSelect from './ChainSelect'
 function Portfolio() {
   return (
     <Wrapper>
       <Content>
         <Chart>
-          <div>
-            <CoinPrice>
-              <CoinPriceTitle>
-                <Image width={50} height={50} src={MoonbeamIcon} />
-                <p style={{ paddingLeft: '10px' }}>Moonbeam (GLMR)</p>
-              </CoinPriceTitle>
-              <CoinPriceValue>{'$'} 5.98</CoinPriceValue>
-              <PercentChange>
-                +0.5$ (10%) <FiChevronsUp />
-              </PercentChange>
-            </CoinPrice>
-          </div>
+          <ChainSelect></ChainSelect>
+          <CoinPrice>
+            <CoinPriceTitle>
+              <Image width={50} height={50} src={MoonbeamIcon} />
+              <p style={{ paddingLeft: '10px' }}>Moonbeam (GLMR)</p>
+            </CoinPriceTitle>
+            <CoinPriceValue>{'$'} 5.98</CoinPriceValue>
+            <PercentChange>
+              +0.5$ (10%) <FiChevronsUp />
+            </PercentChange>
+          </CoinPrice>
           <CoinPriceChart />
         </Chart>
         <ChainInfo />
@@ -36,9 +36,9 @@ function Portfolio() {
           <Table>
             <TableItem>
               <TableRow>
-                <div style={{ flex: 3 }}>Name</div>
+                <div style={{ flex: 2 }}>Name</div>
                 <div style={{ flex: 2 }}>Balance</div>
-                <div style={{ flex: 1 }}>Price</div>
+                <div style={{ flex: 2 }}>Price</div>
                 <div style={{ flex: 1 }}>Allocaiton</div>
                 <div style={{ flex: 0 }}>
                   <BsThreeDotsVertical />

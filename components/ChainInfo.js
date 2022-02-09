@@ -9,7 +9,7 @@ import MoonriverIcon from '../assets/coin-icon/moonriver.png'
 const ChainInfo = () => {
   return (
     <Wrapper>
-      <Card style={{ borderLeft: '8px solid #f29299' }}>
+      <Card style={{ borderLeft: '8px solid #E397D4' }}>
         <ChainWrapper>
           <Title>Marketcap</Title>
           <Description className="gradient__text">$439.48M</Description>
