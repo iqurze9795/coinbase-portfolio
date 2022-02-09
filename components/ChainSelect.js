@@ -10,8 +10,12 @@ const ChainSelect = () => {
       <Button
         onClick={() => setActiveChain('moonbeam')}
         style={{
-          background: activeChain === 'moonbeam' ? 'white' : 'transparent',
-          color: activeChain === 'moonbeam' ? 'black' : 'white',
+          //   background:  'white' : 'transparent',
+          border:
+            activeChain === 'moonbeam'
+              ? '1px solid #C6467F'
+              : '1px solid #272b2f',
+          //   color: activeChain === 'moonbeam' ? 'black' : 'white',
         }}
       >
         <Image src={MoonbeamLogo} width={16} height={16} />
@@ -20,8 +24,10 @@ const ChainSelect = () => {
       <Button
         onClick={() => setActiveChain('moonriver')}
         style={{
-          background: activeChain === 'moonriver' ? 'white' : 'transparent',
-          color: activeChain === 'moonriver' ? 'black' : 'white',
+          border:
+            activeChain === 'moonriver'
+              ? '1px solid #E6B73F'
+              : '1px solid #272b2f',
         }}
       >
         <Image src={MoonriverLogo} width={16} height={16} />
