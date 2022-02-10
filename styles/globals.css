@@ -16,42 +16,23 @@ a {
 }
 .bg-main-gradient {
   /* ff 3.6+ */
-  background: -moz-linear-gradient(
-    180deg,
-    rgba(10, 10, 10, 1) 0%,
-    rgba(19, 25, 55, 1) 59%
-  );
+  background:-moz-linear-gradient(180deg, rgba(13, 17, 38, 1) 0%, rgba(23, 30, 67, 1) 82%, rgba(34, 43, 96, 1) 100%); 
 
   /* safari 5.1+,chrome 10+ */
-  background: -webkit-linear-gradient(
-    180deg,
-    rgba(10, 10, 10, 1) 0%,
-    rgba(19, 25, 55, 1) 59%
-  );
+  background:-webkit-linear-gradient(180deg, rgba(13, 17, 38, 1) 0%, rgba(23, 30, 67, 1) 82%, rgba(34, 43, 96, 1) 100%);
 
   /* opera 11.10+ */
-  background: -o-linear-gradient(
-    180deg,
-    rgba(10, 10, 10, 1) 0%,
-    rgba(19, 25, 55, 1) 59%
-  );
+  background:-o-linear-gradient(180deg, rgba(13, 17, 38, 1) 0%, rgba(23, 30, 67, 1) 82%, rgba(34, 43, 96, 1) 100%);
 
   /* ie 6-9 */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#131937', endColorstr='#0A0A0A', GradientType=1 );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#222B60', endColorstr='#0D1126', GradientType=1 );
 
   /* ie 10+ */
-  background: -ms-linear-gradient(
-    180deg,
-    rgba(10, 10, 10, 1) 0%,
-    rgba(19, 25, 55, 1) 59%
-  );
+  background:-ms-linear-gradient(180deg, rgba(13, 17, 38, 1) 0%, rgba(23, 30, 67, 1) 82%, rgba(34, 43, 96, 1) 100%);
 
   /* global 94%+ browsers support */
-  background: linear-gradient(
-    180deg,
-    rgba(10, 10, 10, 1) 0%,
-    rgba(19, 25, 55, 1) 59%
-  );
+  background:linear-gradient(180deg, rgba(13, 17, 38, 1) 0%, rgba(23, 30, 67, 1) 82%, rgba(34, 43, 96, 1) 100%);
+
 }
 
 .bg-second-gradient {
@@ -102,6 +83,6 @@ a {
 }
 
 .apexcharts-tooltip {
-  background: #0C0D12;
-  color: #D03478;
+  background: #0c0d12;
+  color: #d03478;
 }
