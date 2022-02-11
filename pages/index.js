@@ -1,11 +1,15 @@
 import styled from 'styled-components'
 import { useWeb3 } from '@3rdweb/hooks'
 import Dashboard from './Dashboard'
-
+import Head from 'next/head'
 export default function Home() {
   // const { address, connectWallet } = useWeb3()
   return (
     <Wrapper>
+      <Head>
+        <title>Moonbeam Dashboard</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       {/* {address ? (
         <Dashboard address={address} />
       ) : (
@@ -18,7 +22,7 @@ export default function Home() {
           </Details>
         </WalletConnect>
       )} */}
-      <Dashboard address={"0xc55ea7249b032f1c0bc4f8d8fc2a3b147fbbc1bb"} />
+      <Dashboard address={'0xc55ea7249b032f1c0bc4f8d8fc2a3b147fbbc1bb'} />
     </Wrapper>
   )
 }
